@@ -3,11 +3,11 @@ import { connect } from 'react-redux';
 import Counters from '../components/Counters';
 import * as actionCreators from '../redux/modules/counters';
 
-const createActionDispatchers = actionCreators => dispatch =>
-  Object.keys(actionCreators).reduce((actionDispatchers, name) => {
-    const actionCreator = actionCreators[name];
+const createActionDispatchers = _actionCreators => dispatch =>
+  Object.keys(_actionCreators).reduce((actionDispatchers, name) => {
+    const actionCreator = _actionCreators[name];
     if (typeof actionCreator === 'function') {
-      actionDispatchers[name] = (...args) => dispatch(actionCreator(...args));
+      actionDispatchers[name] = (...args) => dispatch(actionCreator(...args)); // eslint-disable-line no-param-reassign
     }
     return actionDispatchers;
   }, {});

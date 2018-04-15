@@ -5,6 +5,18 @@ import { StyleSheet, View } from 'react-native';
 import Counter from './Counter';
 import Button from './Button';
 
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    paddingTop: 50,
+  },
+  addBtn: {
+    marginTop: 50,
+  },
+});
+
 const Counters = props => {
   const {
     newCounter,
@@ -45,17 +57,5 @@ Counters.propTypes = {
   incrementWithDelay: PropTypes.func.isRequired,
   newCounter: PropTypes.func.isRequired,
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'flex-start',
-    alignItems: 'center',
-    paddingTop: 50,
-  },
-  addBtn: {
-    marginTop: 50,
-  },
-});
 
 export default Counters;

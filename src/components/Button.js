@@ -35,4 +35,9 @@ Button.propTypes = {
   onClick: PropTypes.func.isRequired,
 };
 
+Button.defaultProps = {
+  style: {},
+  textStyle: {},
+};
+
 export default Button;
